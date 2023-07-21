@@ -3,6 +3,7 @@ from torchvision import datasets, transforms
 import matplotlib.pyplot as plt
 import numpy as np
 import pdb
+import albumentations as alb
 
 
 # train_transform = transforms.Compose([transforms.ToTensor(),
@@ -17,7 +18,7 @@ import pdb
 train_transform = transforms.Compose([
                                       #  transforms.Resize((28, 28)),
                                       #  transforms.ColorJitter(brightness=0.10, contrast=0.1, saturation=0.10, hue=0.1),
-                                       transforms.RandomCrop(32, padding=4, padding_mode='reflect'),
+                                       #transforms.RandomCrop(32, padding=4, padding_mode='reflect'),
                                        transforms.RandomHorizontalFlip(),
                                        transforms.RandomRotation(15),
                                        transforms.ToTensor(),
